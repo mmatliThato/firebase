@@ -1,0 +1,40 @@
+page-display-rooms {
+  .container{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+  }
+  .bg{
+    background: #f39c12;    
+  }
+  button{
+    width: 40%;
+    height: 30%;
+border-radius: 30px;
+flex-direction: column-reverse;
+background: #f39c12;   
+  color: gray; 
+}
+.card-title {
+  color: gray; 
+  font-size:14px;
+}      
+.card-subtitle{
+  color: gray;  
+}
+// img{
+// width: 60%;
+// height: 100px;
+// justify-content: center;
+// }
+
+}
+
+
+
+  .btn{
+    border-radius: 29%;
+   background-color: dodgerblue;
+width:100%;
+  }
+ 

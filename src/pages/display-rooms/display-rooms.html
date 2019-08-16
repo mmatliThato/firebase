@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-navbar color="primary" hideBackButton="true" >
+    <ion-title>Our rooms</ion-title>
+  </ion-navbar>
+</ion-header> 
+<ion-content padding class="bg">
+<!--  
+  <div class="cards">
+    
+    <div class="card" *ngFor="let room of rooms;">
+      <div class="image">
+          <img src="{{room.image}}" alt="my_rooms">
+      </div>
+        
+        <div class="text">
+            <h4>{{room.RoomType}}</h4>
+            <h4>{{room.description}}</h4>
+            <p>{{room.Price}}</p>
+
+          <button (click)="bookNow(room.Price)"  class="btn">Book</button>
+          <button (click)="delete(room.key)" class="btn">Remove</button>
+        </div>
+      </div>
+ </div>  -->
+
+ <ion-card *ngFor="let room of rooms;">
+    <img src="{{room.image}}" alt="my_rooms" (click)="bookNow(room.Price)" >
+   
+    <div class="card-title">{{room.RoomType}}</div>
+    <div class="card-subtitle">R{{room.Price}}</div>
+    <div class="card-subtitle">{{room.Description}}</div>
+ 
+   
+    <button (click)="bookNow(room.Price)">Book</button>
+ 
+ 
+   
+    <button (click)="delete(room.key)">Delete</button>
+  </ion-card>
+<!-- 
+  <ion-card>
+    <img src="../../assets/imgs/JDW_9897.jpg"  (click)="book()"/>
+    <div class="card-title">Double basic</div>
+    <div class="card-subtitle"  (click)="book()">price  R4000/per night</div>
+  </ion-card>
+
+  <ion-card>
+    <img src="../../assets/imgs/GRD_Classic_Double_(2).jpg"  (click)="book()"/>
+    <div class="card-title"></div>
+    <div class="card-subtitle" single  (click)="book()">price  R3000/per night</div>
+  </ion-card>
+
+  <ion-card>
+    <img src="../../assets/imgs/13d75164caaf0f692321d155994ff9e6.jpg"  (click)="book()"/>
+    <div class="card-title">studio</div>
+    <div class="card-subtitle"  (click) ="FindRooms()">price  R2000/per night</div>
+  </ion-card>  -->
+  
+</ion-content>

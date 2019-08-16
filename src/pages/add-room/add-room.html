@@ -1,0 +1,52 @@
+
+
+<!-- <ion-content padding>
+<div class="container">
+
+   <ion-input [(ngModel)]="Hotel.name" placeholder="Enter hotel name" ></ion-input>
+
+   <ion-input [(ngModel)]="Hotel.Description"  placeholder="Enter hotel description" ></ion-input>
+
+   
+    <button ion-button (click) ="add({name:Hotel.name, description:Hotel.Description})">save</button>
+     
+ 
+
+</div>
+</ion-content> -->
+<ion-header>
+    <ion-toolbar color=primary>
+      <ion-buttons start>
+          <ion-buttons>
+              <button ion-button icon-only (click)="takePhoto(0)"><ion-icon name="attach"></ion-icon></button>
+            </ion-buttons>
+      </ion-buttons>
+      <ion-title>Add a room</ion-title>
+     
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content padding class="bg">
+     
+    <div class="container">
+      <div class="uploadedImages">
+        <img [src]="myphoto" alt="my uploadings" *ngIf="myphoto">
+      </div>
+      <ion-list>
+        <ion-item>
+          <ion-label floating>Room Type</ion-label>
+          <ion-input type="text" [(ngModel)]="room.roomtype"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Price</ion-label>
+          <ion-input type="number" [(ngModel)]="room.price"></ion-input>
+      </ion-item>
+        <ion-item>
+          <ion-label floating>Description</ion-label>
+         <ion-input type="text" [(ngModel)]="room.description"></ion-input>
+      </ion-item>
+      </ion-list>
+      <button ion-button color="primary" (click)="createRooms(room)">Save</button>
+    </div>
+  </ion-content>
+  

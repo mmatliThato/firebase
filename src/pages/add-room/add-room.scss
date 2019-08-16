@@ -1,0 +1,13 @@
+page-add-room {
+  .container{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+  }
+  .bg{
+    background: #f39c12;    
+  }
+  button{
+    border-radius: 15px; 
+  }
+}

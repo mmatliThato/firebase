@@ -1,0 +1,126 @@
+<ion-header>
+    <ion-navbar color="primary" hideBackButton="true" >
+      <ion-title>Booking Form</ion-title>
+    </ion-navbar>
+  </ion-header> 
+
+<!-- <ion-content padding class="bg">
+
+  <ion-list no-lines>
+
+      <ion-item>
+          <ion-label><ion-icon name="key"></ion-icon> Room Type</ion-label>
+          <ion-select  [(ngModel)]="Person.roomtype"> 
+              <ion-option value="single" (click)="single()">Double classic</ion-option>
+              <ion-option value="triple-superior"(click)="villa()">Triple superior</ion-option>
+              <ion-option value="single" (click)="penhouse()">single</ion-option>
+              <ion-option value="triple-classic" (click)="studio()">Triple classic</ion-option>
+          </ion-select>
+      </ion-item>
+
+      <ion-item>
+          <ion-label><ion-icon name="people"></ion-icon> Beds</ion-label>
+          <ion-select [(ngModel)]="Person.beds">
+              <ion-option value="1" (click)="one()">1</ion-option>
+              <ion-option value="2" (click)="two()">2</ion-option>
+              <ion-option value="3" (click)="three()">3</ion-option>
+              <ion-option value="4" (click)=" four()">4</ion-option>
+              <ion-option value="5" (click)="five()">5</ion-option>
+              <ion-option value="6" (click)="six()">6</ion-option>
+          </ion-select>
+      </ion-item>
+
+      <ion-item>
+          <ion-label><ion-icon name="people"></ion-icon> Guests</ion-label>
+          <ion-select [(ngModel)]="Person.guest">
+              <ion-option value="1" (click)="1()">1</ion-option>
+              <ion-option value="2" (click)="2()">2</ion-option>
+              <ion-option value="3" (click)="3()">3</ion-option>
+              <ion-option value="4" (click)="4()">4</ion-option>
+              <ion-option value="5" (click)="5()">5</ion-option>
+              <ion-option value="6" (click)="6()">6</ion-option>
+              <ion-option value="7" (click)="7()">7</ion-option>
+              <ion-option value="8" (click)="8()">8</ion-option>
+          </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label><ion-icon name="clock"></ion-icon> Check in:</ion-label>
+        <ion-datetime displayFormat="DD/MM/YYYY" max="2020-12-31" pickerFormat="DD MM YYYY" [(ngModel)]="Person.from" (click)="to()"></ion-datetime>
+      </ion-item>
+
+      <ion-item>
+        <ion-label><ion-icon name="alarm"></ion-icon> Check out:</ion-label>
+        <ion-datetime displayFormat="DD/MM/YYYY" max="2020-12-31" pickerFormat="DD MM YYYY" [(ngModel)]="Person.to" (click)="from()"></ion-datetime>
+      </ion-item>
+      
+      <ion-item>
+      <h2>Cost:   R{{sum}} </h2> 
+      </ion-item>
+      
+      <button ion-button color="primary"(click)="total()" full>get Total</button>
+  
+      <button ion-button color="primary" (click)="save({roomtype: Person.roomtype,  beds:Person.beds, guest:Person.guest , from:Person.from, to:Person.to})" full>Proceed</button>
+
+  </ion-list>
+
+
+
+</ion-content> -->
+
+<ion-content padding class="bg">
+  <!-- <h3>please fill in the following form</h3> -->
+<br>
+    <div class="dates">
+     
+        <ion-item>
+          <ion-label floating>Check-In date</ion-label>
+          <ion-datetime yearValues="2022,2021,2020,2019" style="color:  grey; border-bottom: 1px solid black" displayFormat="DD/MM/YYYY"
+            [(ngModel)]="booking.checkin"></ion-datetime>
+        </ion-item>
+  
+  
+        <ion-item>
+          <ion-label floating style="color:  grey; font-size: 100%; font-weight: 500">Check-out date</ion-label>
+          <ion-datetime yearValues="2022,2021,2020,2019" style="color: grey; border-bottom: 1px solid black" displayFormat="DD/MM/YYYY"
+            [(ngModel)]="booking.checkout"></ion-datetime>
+        </ion-item>
+       
+      </div>
+      <div class="guests">
+  
+        <ion-item>
+          <ion-label floating style="color:  grey; font-size: 100%; font-weight: 500"> Adults</ion-label>
+          <ion-select [(ngModel)]="booking.adults" style="color:  grey; border-bottom: 1px solid black">
+            <ion-option value="1">1</ion-option>
+            <ion-option value="2">2</ion-option>
+            <ion-option value="3">3</ion-option>
+            <ion-option value="4">4</ion-option>
+            <ion-option value="5">5</ion-option>
+            <ion-option value="6">6</ion-option>
+          </ion-select>
+        </ion-item>
+  
+  
+  
+        <ion-item>
+          <ion-label floating style="color:  grey; font-size: 100%; font-weight: 500">Children</ion-label>
+          <ion-select [(ngModel)]="booking.children" style="color: grey; border-bottom: 1px solid black">
+              <ion-option>0</ion-option>
+            <ion-option value="1">1</ion-option>
+            <ion-option value="2">2</ion-option>
+            <ion-option value="3">3</ion-option>
+            <ion-option value="4">4</ion-option>
+            <ion-option value="5">5</ion-option>
+            <ion-option value="6">6</ion-option>
+          </ion-select>
+        </ion-item>
+  
+
+        
+      </div>
+     <br>
+        <button (click)="createBook()" ion-button full class="btn1">Next</button>
+        <br>
+        <button (click)="cancel() " ion-button full class="btn1">Cancel</button>
+     
+</ion-content>
